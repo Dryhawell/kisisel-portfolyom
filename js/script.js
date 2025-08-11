@@ -58,6 +58,14 @@ particlesJS('particles-js', {
 
 // Dil Değiştirme Fonksiyonu
 function changeLanguage(lang) {
+    // Dil içeriklerini değiştir
+    document.querySelectorAll('.tr-content').forEach(el => {
+        el.style.display = lang === 'tr' ? 'block' : 'none';
+    });
+    document.querySelectorAll('.en-content').forEach(el => {
+        el.style.display = lang === 'en' ? 'block' : 'none';
+    });
+
     const translations = {
         tr: {
             about: 'Hakkımda',
@@ -65,7 +73,10 @@ function changeLanguage(lang) {
             skills: 'Yeteneklerim',
             contact: 'İletişim',
             advice: 'Benden Sana Bir Tavsiye',
-            // Diğer çeviriler buraya eklenecek
+            sendMessage: 'Mesaj Gönder',
+            name: 'Adınız',
+            email: 'E-posta Adresiniz',
+            message: 'Mesajınız'
         },
         en: {
             about: 'About Me',
@@ -73,7 +84,10 @@ function changeLanguage(lang) {
             skills: 'My Skills',
             contact: 'Contact',
             advice: 'A Piece of Advice from Me',
-            // Diğer çeviriler buraya eklenecek
+            sendMessage: 'Send Message',
+            name: 'Your Name',
+            email: 'Your Email',
+            message: 'Your Message'
         }
     };
 
