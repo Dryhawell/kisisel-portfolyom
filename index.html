@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talha Tarabulus - Kişisel Portfolyo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Dil Seçimi -->
+    <div class="language-selector">
+        <button onclick="changeLanguage('tr')">TR</button>
+        <button onclick="changeLanguage('en')">EN</button>
+    </div>
+
+    <!-- Tema Değiştirme -->
+    <div class="theme-toggle">
+        <button onclick="toggleTheme()">Tema Değiştir</button>
+    </div>
+
+    <!-- Particles.js Arka Plan -->
+    <div id="particles-js"></div>
+
+    <!-- Ana Menü -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#ataturk">Atatürk</a></li>
+            <li><a href="#about">Hakkımda</a></li>
+            <li><a href="#projects">Projelerim</a></li>
+            <li><a href="#skills">Yeteneklerim</a></li>
+            <li><a href="#contact">İletişim</a></li>
+            <li><a href="#advice">Benden Sana Bir Tavsiye</a></li>
+        </ul>
+    </nav>
+
+    <!-- Atatürk Bölümü -->
+    <section id="ataturk" class="section">
+        <div class="container">
+            <div class="ataturk-image">
+                <!-- Atatürk fotoğrafı buraya gelecek -->
+            </div>
+            <div class="ataturk-quote">
+                <!-- Atatürk alıntısı buraya gelecek -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımda Bölümü -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Hakkımda</h2>
+            <div class="profile-image">
+                <!-- Profil fotoğrafı buraya gelecek -->
+            </div>
+            <div class="bio">
+                <!-- Biyografi buraya gelecek -->
+            </div>
+            <div class="interests">
+                <h3>İlgi Alanlarım</h3>
+                <!-- İlgi alanları buraya gelecek -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projeler Bölümü -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projelerim</h2>
+            <div class="projects-grid">
+                <!-- Projeler dinamik olarak buraya eklenecek -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Yetenekler Bölümü -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Yeteneklerim</h2>
+            <div class="programming-skills">
+                <h3>Programlama Dilleri</h3>
+                <!-- Programlama dilleri buraya gelecek -->
+            </div>
+            <div class="tools">
+                <h3>Kullandığım Yazılım Araçları</h3>
+                <!-- Yazılım araçları buraya gelecek -->
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Bölümü -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>İletişim</h2>
+            <div class="contact-links">
+                <a href="mailto:talhatrlbz@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i> E-posta
+                </a>
+                <a href="#" class="contact-item" id="linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="#" class="contact-item" id="medium">
+                    <i class="fab fa-medium"></i> Medium
+                </a>
+                <a href="#" class="contact-item" id="instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
+            <form id="contact-form" class="contact-form">
+                <input type="text" placeholder="Adınız" required>
+                <input type="email" placeholder="E-posta Adresiniz" required>
+                <textarea placeholder="Mesajınız" required></textarea>
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Benden Sana Bir Tavsiye Bölümü -->
+    <section id="advice" class="section">
+        <div class="container">
+            <h2>Benden Sana Bir Tavsiye</h2>
+            <p>Şu şiirime kulak vermeni istiyorum:</p>
+            <div class="poem">
+                <!-- Şiir buraya gelecek -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
