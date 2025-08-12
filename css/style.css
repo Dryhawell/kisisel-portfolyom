@@ -460,6 +460,21 @@ body {
     font-style: italic;
     margin-top: 2rem;
     white-space: pre-line;
+    line-height: 2;
+}
+
+.poem p {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.poem-author {
+    display: block;
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: var(--forest-green);
+    font-style: normal;
 }
 
 /* Neon Efektler */
