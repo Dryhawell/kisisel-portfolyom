@@ -1,0 +1,70 @@
+/* Proje Kartı Stilleri */
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-img:hover {
+    transform: scale(1.05);
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-header {
+    margin-bottom: 1.5rem;
+}
+
+.project-header h3 {
+    color: var(--forest-green);
+    margin-bottom: 0.5rem;
+}
+
+.project-status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--caramel);
+    color: white;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.project-description {
+    margin: 1.5rem 0;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links button {
+    padding: 0.5rem 1rem;
+    background: var(--forest-green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.project-links button:hover {
+    background: #1a6b1a;
+}
