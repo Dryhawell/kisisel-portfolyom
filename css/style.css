@@ -223,6 +223,12 @@ body {
     line-height: 1.6;
 }
 
+.project-description p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
 .project-links {
     display: flex;
     gap: 1rem;
