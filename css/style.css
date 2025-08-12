@@ -133,10 +133,35 @@ body {
 }
 
 .ataturk-quote {
-    font-style: italic;
     text-align: center;
-    font-size: 1.2rem;
+    padding: 2rem 0;
+}
+
+.ataturk-quote p {
+    font-style: italic;
+    font-size: 1.4rem;
     color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.quote-author {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--forest-green);
+    margin-top: 1rem;
+}
+
+.ataturk-image {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ataturk-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Hakkımda Bölümü */
