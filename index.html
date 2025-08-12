@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Talha Tarlabaz - Kişisel Portfolyo</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
@@ -303,11 +304,27 @@
                     <i class="fab fa-instagram"></i> Instagram
                 </a>
             </div>
-            <form id="contact-form" class="contact-form">
-                <input type="text" placeholder="Adınız" required>
-                <input type="email" placeholder="E-posta Adresiniz" required>
-                <textarea placeholder="Mesajınız" required></textarea>
-                <button type="submit">Gönder</button>
+            <form id="contact-form" class="contact-form" action="https://formsubmit.co/talhatrlbz@gmail.com" method="POST">
+                <input type="hidden" name="_next" value="https://dryhawell.github.io/kisisel-portfolyom/thanks.html">
+                <input type="hidden" name="_subject" value="Portfolyo Sitesi İletişim Formu">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="true">
+                <div class="form-group">
+                    <div class="tr-content">
+                        <input type="text" name="name" placeholder="Adınız" required>
+                        <input type="email" name="email" placeholder="E-posta Adresiniz" required>
+                        <input type="text" name="subject" placeholder="Konu" required>
+                        <textarea name="message" placeholder="Mesajınız" required></textarea>
+                        <button type="submit">Gönder</button>
+                    </div>
+                    <div class="en-content" style="display: none;">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send</button>
+                    </div>
+                </div>
             </form>
         </div>
     </section>
@@ -341,5 +358,6 @@
     
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>

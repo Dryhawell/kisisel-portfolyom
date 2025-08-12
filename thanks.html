@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teşekkürler - Talha Tarlabaz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <style>
+        .thank-you-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .thank-you-message {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        .return-button {
+            background: var(--forest-green);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .return-button:hover {
+            background: #1a6b1a;
+        }
+    </style>
+</head>
+<body>
+    <!-- Particles.js Arka Plan -->
+    <div id="particles-js"></div>
+
+    <div class="thank-you-container">
+        <div class="thank-you-message">
+            <div class="tr-content">
+                <h1>Teşekkürler!</h1>
+                <p>Mesajınız başarıyla iletildi. En kısa sürede size dönüş yapacağım.</p>
+            </div>
+            <div class="en-content" style="display: none;">
+                <h1>Thank You!</h1>
+                <p>Your message has been successfully sent. I will get back to you as soon as possible.</p>
+            </div>
+        </div>
+        <a href="index.html" class="return-button">
+            <span class="tr-content">Ana Sayfaya Dön</span>
+            <span class="en-content" style="display: none;">Return to Homepage</span>
+        </a>
+    </div>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

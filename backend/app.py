@@ -11,26 +11,28 @@ CORS(app)
 # E-posta ayarları
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
-SMTP_USERNAME = "talhatrlbz@gmail.com"
-SMTP_PASSWORD = os.environ.get("EMAIL_PASSWORD")  # Gmail App Password
+SMTP_USERNAME = "talhatrlbz@gmail.com"  # Gmail adresinizi buraya yazın
+SMTP_PASSWORD = os.environ.get("EMAIL_PASSWORD")  # Gmail App Password'ü environment variable olarak kullanacağız
 
-@app.route('/send_email', methods=['POST'])
+@app.route('/send-message', methods=['POST'])
 def send_email():
     try:
-        data = request.form
+        data = request.get_json()
         name = data.get('name')
         email = data.get('email')
+        subject = data.get('subject')
         message = data.get('message')
 
         # E-posta oluştur
         msg = MIMEMultipart()
         msg['From'] = SMTP_USERNAME
         msg['To'] = SMTP_USERNAME  # Kendinize gönderiyorsunuz
-        msg['Subject'] = f"Portfolyo Sitesi İletişim Formu - {name}"
+        msg['Subject'] = f"Portfolyo Sitesi İletişim Formu - {subject}"
 
         body = f"""
         İsim: {name}
         E-posta: {email}
+        Konu: {subject}
         
         Mesaj:
         {message}
