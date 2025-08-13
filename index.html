@@ -21,19 +21,40 @@
     <!-- Twitter Card Meta Etiketleri -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Talha Tarlabaz - Yazılım Geliştirici & Münazaracı">
-    <meta name="twitter:description" content="OSTİM Teknik Üniversitesi YBS öğrencisi, HSD OSTİMTECH Core Team Üyesi. Yazılım geliştirme ve münazara tutkunu.">
+    <meta name="twitter:description" content="OSTİM Teknik Üniversitesi YBS öğrencisi, HSD OSTİMTECH Core Team Üyesi. Yazılım geliştirme ve edebiyat tutkunu.">
     <meta name="twitter:image" content="https://dryhawell.github.io/kisisel-portfolyom/images/talha-tarlabaz.jpg">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://dryhawell.github.io/kisisel-portfolyom/">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="theme-color" content="#228B22">
+    
     <!-- Stil Dosyaları -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/loading.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-content">
+                <div class="loader-circle"></div>
+                <div class="loader-text">
+                    <span class="tr-content">Yükleniyor</span>
+                    <span class="en-content" style="display: none;">Loading</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Dil Seçimi -->
     <div class="language-selector">
         <button onclick="changeLanguage('tr')">TR</button>
@@ -380,5 +401,6 @@
     <!-- JavaScript -->
     <script src="js/script.js"></script>
     <script src="js/contact.js"></script>
+    <script src="js/loading.js"></script>
 </body>
 </html>
