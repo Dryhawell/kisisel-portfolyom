@@ -212,3 +212,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Dil Değiştirme Fonksiyonu
+function changeLanguage(lang) {
+    const trContent = document.querySelectorAll('.tr-content');
+    const enContent = document.querySelectorAll('.en-content');
+    const deContent = document.querySelectorAll('.de-content');
+    const esContent = document.querySelectorAll('.es-content');
+
+    // Tüm dil içeriklerini gizle
+    [trContent, enContent, deContent, esContent].forEach(elements => {
+        elements.forEach(el => el.style.display = 'none');
+    });
+
+    // Seçilen dili göster
+    let selectedContent;
+    switch(lang) {
+        case 'tr':
+            selectedContent = trContent;
+            break;
+        case 'en':
+            selectedContent = enContent;
+            break;
+        case 'de':
+            selectedContent = deContent;
+            break;
+        case 'es':
+            selectedContent = esContent;
+            break;
+    }
+    
+    selectedContent.forEach(el => el.style.display = '');
+
+    // Dil tercihini kaydet
+    localStorage.setItem('language', lang);
+}
