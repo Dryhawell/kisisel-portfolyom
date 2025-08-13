@@ -27,20 +27,28 @@
 
 .project-header {
     margin-bottom: 1.5rem;
+    background-color: var(--forest-green);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .project-header h3 {
-    color: var(--forest-green);
-    margin-bottom: 0.5rem;
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
 }
 
 .project-status {
     display: inline-block;
-    padding: 0.25rem 0.75rem;
+    padding: 0.5rem 1rem;
     background: var(--caramel);
     color: white;
-    border-radius: 15px;
+    border-radius: 20px;
     font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .project-description {
