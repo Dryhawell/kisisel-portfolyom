@@ -35,10 +35,12 @@
     align-items: center;
 }
 
-.project-header h3 {
+.project-title {
     color: white;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 .project-status {
