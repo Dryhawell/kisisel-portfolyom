@@ -46,6 +46,91 @@ body {
     z-index: -1;
 }
 
+/* Atatürk Bölümü */
+.ataturk-image {
+    text-align: center;
+    margin: 3rem auto;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+.ataturk-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 8px solid var(--bg-color);
+    transition: transform 0.3s ease;
+}
+
+.ataturk-image::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 2px solid var(--forest-green);
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.ataturk-quote {
+    text-align: center;
+    font-style: italic;
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background-color: rgba(34, 139, 34, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.ataturk-quote::before,
+.ataturk-quote::after {
+    content: '"';
+    position: absolute;
+    font-size: 4rem;
+    color: var(--forest-green);
+    opacity: 0.2;
+}
+
+.ataturk-quote::before {
+    top: 0;
+    left: 20px;
+}
+
+.ataturk-quote::after {
+    bottom: -20px;
+    right: 20px;
+}
+
+.ataturk-quote p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--text-color);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .ataturk-image {
+        max-width: 100%;
+        margin: 2rem auto;
+    }
+    
+    .ataturk-quote {
+        padding: 2rem 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .ataturk-quote p {
+        font-size: 1.4rem;
+    }
+}
+
 /* Dil Seçici */
 .language-selector {
     position: fixed;
