@@ -192,21 +192,16 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
 
 // Dil Değiştirme Fonksiyonu
 function changeLanguage(lang) {
-    const languages = ['tr', 'en', 'de', 'es'];
-    const elements = {};
-    
-    // Her dil için elementleri topla
-    languages.forEach(l => {
-        elements[l] = document.querySelectorAll(`.${l}-content`);
-    });
+    const trContent = document.querySelectorAll('.tr-content');
+    const enContent = document.querySelectorAll('.en-content');
 
-    // Önce tüm dilleri gizle
-    languages.forEach(l => {
-        elements[l].forEach(el => el.style.display = 'none');
-    });
-
-    // Seçilen dili göster
-    elements[lang].forEach(el => el.style.display = '');
+    if (lang === 'tr') {
+        trContent.forEach(el => el.style.display = '');
+        enContent.forEach(el => el.style.display = 'none');
+    } else if (lang === 'en') {
+        trContent.forEach(el => el.style.display = 'none');
+        enContent.forEach(el => el.style.display = '');
+    }
 
     // Dil tercihini kaydet
     localStorage.setItem('language', lang);
