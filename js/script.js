@@ -190,6 +190,28 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
     }
 });
 
+// Dil Değiştirme Fonksiyonu
+function changeLanguage(lang) {
+    const languages = ['tr', 'en', 'de', 'es'];
+    const elements = {};
+    
+    // Her dil için elementleri topla
+    languages.forEach(l => {
+        elements[l] = document.querySelectorAll(`.${l}-content`);
+    });
+
+    // Önce tüm dilleri gizle
+    languages.forEach(l => {
+        elements[l].forEach(el => el.style.display = 'none');
+    });
+
+    // Seçilen dili göster
+    elements[lang].forEach(el => el.style.display = '');
+
+    // Dil tercihini kaydet
+    localStorage.setItem('language', lang);
+}
+
 // Sayfa Yüklendiğinde
 document.addEventListener('DOMContentLoaded', () => {
     // Kaydedilmiş dil tercihini kontrol et
