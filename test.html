@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENÜ TEST</title>
+</head>
+<body style="margin: 0; padding: 20px; font-family: Arial;">
+    <h1>MENÜ TEST SAYFASI</h1>
+    <p>Bu sayfa çalışıyorsa dosya güncellemesi yapılıyor.</p>
+    
+    <!-- HAMBURGER MENÜ -->
+    <button id="menuBtn" style="position: fixed; top: 20px; right: 20px; z-index: 9999; background: #228B22; color: white; border: none; border-radius: 5px; padding: 15px; cursor: pointer; font-size: 16px;">
+        ☰ MENÜ
+    </button>
+    
+    <!-- AÇILIR MENÜ -->
+    <div id="menu" style="position: fixed; top: 70px; right: 20px; background: rgba(34, 139, 34, 0.95); border-radius: 10px; padding: 20px; display: none; z-index: 9998;">
+        <a href="#" style="display: block; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin: 5px 0;">Atatürk</a>
+        <a href="#" style="display: block; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin: 5px 0;">Hakkımda</a>
+        <a href="#" style="display: block; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin: 5px 0;">Projelerim</a>
+        <a href="#" style="display: block; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin: 5px 0;">Yeteneklerim</a>
+        <a href="#" style="display: block; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin: 5px 0;">İletişim</a>
+    </div>
+    
+    <script>
+        console.log('🚀 Test sayfası yüklendi!');
+        
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            console.log('🎯 Menü butonuna tıklandı!');
+            const menu = document.getElementById('menu');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+                console.log('✅ Menü açıldı');
+            } else {
+                menu.style.display = 'none';
+                console.log('❌ Menü kapandı');
+            }
+        });
+        
+        // Menü dışına tıklayınca kapat
+        document.addEventListener('click', function(e) {
+            if (!document.getElementById('menuBtn').contains(e.target) && !document.getElementById('menu').contains(e.target)) {
+                document.getElementById('menu').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

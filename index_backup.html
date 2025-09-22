@@ -50,6 +50,9 @@
 
 </head>
 <body>
+    <!-- BASIT TEST -->
+    <h1 style="position: fixed; top: 0; right: 0; z-index: 999999; background: yellow; color: black; padding: 10px; margin: 0;">TEST ÇALIŞIYOR</h1>
+    
     <div id="particles-js"></div>
     
 
@@ -79,25 +82,46 @@
         <button onclick="toggleTheme()" class="en-content" style="display: none;">Change Theme</button>
     </div>
 
-    <!-- HAMBURGER MENÜ BUTONU -->
-    <button id="menuBtn" style="position: fixed; top: 20px; right: 80px; z-index: 999999; background: #ff0000; color: white; border: none; border-radius: 5px; padding: 20px; cursor: pointer; font-size: 18px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); font-weight: bold;">
+    <!-- TEST HAMBURGER MENÜ -->
+    <div style="position: fixed; top: 10px; right: 10px; z-index: 99999; background: red; color: white; padding: 20px; font-size: 20px; cursor: pointer; border-radius: 10px;" onclick="toggleMenu()" id="testMenu">
         ☰ MENÜ
-    </button>
+    </div>
+    
+    <script>
+    console.log('TEST: Script yükleniyor...');
+    function toggleMenu() {
+        console.log('TEST: toggleMenu çalıştı!');
+        const nav = document.querySelector('.main-nav');
+        if (nav) {
+            if (nav.style.opacity === '0' || nav.style.opacity === '') {
+                nav.style.opacity = '1';
+                nav.style.visibility = 'visible';
+                nav.style.transform = 'translateY(0) scale(1)';
+                console.log('TEST: Menü açıldı');
+            } else {
+                nav.style.opacity = '0';
+                nav.style.visibility = 'hidden';
+                nav.style.transform = 'translateY(-10px) scale(0.95)';
+                console.log('TEST: Menü kapandı');
+            }
+        } else {
+            console.log('TEST: Nav bulunamadı!');
+        }
+    }
+    console.log('TEST: Script tamam');
+    </script>
 
     <!-- Ana Menü -->
-    <div id="menu" style="position: fixed; top: 70px; right: 20px; background: rgba(34, 139, 34, 0.95); border-radius: 10px; padding: 20px; display: none; z-index: 9998; box-shadow: 0 3px 10px rgba(0,0,0,0.2);">
-        <a href="#ataturk" style="display: block; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin: 5px 0; font-weight: bold;">Atatürk</a>
-        <a href="#about" class="tr-content" style="display: block; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin: 5px 0; font-weight: bold;">Hakkımda</a>
-        <a href="#about" class="en-content" style="display: none; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin: 5px 0; font-weight: bold;">About Me</a>
-        <a href="#projects" class="tr-content" style="display: block; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin: 5px 0; font-weight: bold;">Projelerim</a>
-        <a href="#projects" class="en-content" style="display: none; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin: 5px 0; font-weight: bold;">My Projects</a>
-        <a href="#skills" class="tr-content" style="display: block; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin: 5px 0; font-weight: bold;">Yeteneklerim</a>
-        <a href="#skills" class="en-content" style="display: none; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin: 5px 0; font-weight: bold;">My Skills</a>
-        <a href="#contact" class="tr-content" style="display: block; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin: 5px 0; font-weight: bold;">İletişim</a>
-        <a href="#contact" class="en-content" style="display: none; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin: 5px 0; font-weight: bold;">Contact</a>
-        <a href="#advice" class="tr-content" style="display: block; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin: 5px 0; font-weight: bold;">Benden Sana Bir Tavsiye</a>
-        <a href="#advice" class="en-content" style="display: none; color: white; text-decoration: none; padding: 10px; border-radius: 5px; margin: 5px 0; font-weight: bold;">An Advice from Me</a>
-    </div>
+    <nav class="main-nav" style="position: fixed; top: 4rem; right: 1rem; background-color: rgba(34, 139, 34, 0.95); border-radius: 10px; padding: 1rem; z-index: 9998; box-shadow: 0 3px 10px rgba(0,0,0,0.2); min-width: 200px; opacity: 0; visibility: hidden; transition: all 0.3s ease;">
+        <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li style="margin: 0; padding: 0;"><a href="#ataturk" style="color: white; text-decoration: none; padding: 8px 16px; display: block; white-space: nowrap; border-radius: 5px; transition: background-color 0.3s; font-weight: bold;">Atatürk</a></li>
+            <li style="margin: 0; padding: 0;"><a href="#about" class="tr-content" style="color: white; text-decoration: none; padding: 8px 16px; display: block; white-space: nowrap; border-radius: 5px; transition: background-color 0.3s; font-weight: bold;">Hakkımda</a><a href="#about" class="en-content" style="display: none; color: white; text-decoration: none; padding: 8px 16px; white-space: nowrap; border-radius: 5px; transition: background-color 0.3s; font-weight: bold;">About Me</a></li>
+            <li style="margin: 0; padding: 0;"><a href="#projects" class="tr-content" style="color: white; text-decoration: none; padding: 8px 16px; display: block; white-space: nowrap; border-radius: 5px; transition: background-color 0.3s; font-weight: bold;">Projelerim</a><a href="#projects" class="en-content" style="display: none; color: white; text-decoration: none; padding: 8px 16px; white-space: nowrap; border-radius: 5px; transition: background-color 0.3s; font-weight: bold;">My Projects</a></li>
+            <li style="margin: 0; padding: 0;"><a href="#skills" class="tr-content" style="color: white; text-decoration: none; padding: 8px 16px; display: block; white-space: nowrap; border-radius: 5px; transition: background-color 0.3s; font-weight: bold;">Yeteneklerim</a><a href="#skills" class="en-content" style="display: none; color: white; text-decoration: none; padding: 8px 16px; white-space: nowrap; border-radius: 5px; transition: background-color 0.3s; font-weight: bold;">My Skills</a></li>
+            <li style="margin: 0; padding: 0;"><a href="#contact" class="tr-content" style="color: white; text-decoration: none; padding: 8px 16px; display: block; white-space: nowrap; border-radius: 5px; transition: background-color 0.3s; font-weight: bold;">İletişim</a><a href="#contact" class="en-content" style="display: none; color: white; text-decoration: none; padding: 8px 16px; white-space: nowrap; border-radius: 5px; transition: background-color 0.3s; font-weight: bold;">Contact</a></li>
+            <li style="margin: 0; padding: 0;"><a href="#advice" class="tr-content" style="color: white; text-decoration: none; padding: 8px 16px; display: block; white-space: nowrap; border-radius: 5px; transition: background-color 0.3s; font-weight: bold;">Benden Sana Bir Tavsiye</a><a href="#advice" class="en-content" style="display: none; color: white; text-decoration: none; padding: 8px 16px; white-space: nowrap; border-radius: 5px; transition: background-color 0.3s; font-weight: bold;">An Advice from Me</a></li>
+        </ul>
+    </nav>
 
     <!-- Atatürk Bölümü -->
     <section id="ataturk" class="section">
@@ -490,52 +514,20 @@
             console.log('particles.js loaded - callback');
         });
         
-        // HAMBURGER MENÜ İŞLEVSELLİĞİ
-        console.log('� Hamburger menü başlatılıyor...');
-        
+        // BASİT TEST
+        console.log('🔥 DOSYA GÜNCELLENDİ! TIMESTAMP: ' + new Date().getTime());
         document.addEventListener('DOMContentLoaded', function() {
-            const menuBtn = document.getElementById('menuBtn');
-            const menu = document.getElementById('menu');
-            
-            if (menuBtn && menu) {
-                console.log('✅ Menü elemanları bulundu');
-                
-                menuBtn.addEventListener('click', function() {
-                    console.log('🎯 Menü butonuna tıklandı!');
-                    if (menu.style.display === 'none' || menu.style.display === '') {
-                        menu.style.display = 'block';
-                        console.log('✅ Menü açıldı');
-                    } else {
-                        menu.style.display = 'none';
-                        console.log('❌ Menü kapandı');
-                    }
-                });
-                
-                // Menü dışına tıklayınca kapat
-                document.addEventListener('click', function(e) {
-                    if (!menuBtn.contains(e.target) && !menu.contains(e.target)) {
-                        menu.style.display = 'none';
-                    }
-                });
-                
-                // Menü linklerine hover efekti
-                const menuLinks = menu.querySelectorAll('a');
-                menuLinks.forEach(link => {
-                    link.addEventListener('mouseenter', function() {
-                        this.style.backgroundColor = 'rgba(255,255,255,0.1)';
-                    });
-                    link.addEventListener('mouseleave', function() {
-                        this.style.backgroundColor = 'transparent';
-                    });
-                    link.addEventListener('click', function() {
-                        menu.style.display = 'none';
-                    });
-                });
-                
-                console.log('🎉 Hamburger menü hazır!');
-            } else {
-                console.log('❌ Menü elemanları bulunamadı!');
-            }
+            console.log('🚀 DOM HAZIR!');
+            // Test menü butonunu body'e ekle
+            const testBtn = document.createElement('div');
+            testBtn.innerHTML = '☰ MENÜ';
+            testBtn.style.cssText = 'position: fixed; top: 10px; right: 10px; z-index: 999999; background: red; color: white; padding: 15px; font-size: 18px; cursor: pointer; border-radius: 5px; font-weight: bold;';
+            testBtn.onclick = function() {
+                alert('Menü butonuna tıklandı!');
+                console.log('🎯 MENÜ BUTONUNA TIKLANDI!');
+            };
+            document.body.appendChild(testBtn);
+            console.log('🎉 MENÜ BUTONU EKLENDI!');
         });
     </script>
 </body>

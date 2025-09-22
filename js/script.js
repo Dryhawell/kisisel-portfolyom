@@ -1,3 +1,6 @@
+// Test - JavaScript çalışıyor mu?
+console.log('🚀 script.js dosyası yüklendi!');
+
 // Particles.js Konfigürasyonu
 particlesJS('particles-js', {
     particles: {
@@ -264,3 +267,42 @@ function changeLanguage(lang) {
     // Dil tercihini kaydet
     localStorage.setItem('language', lang);
 }
+
+// Menü işlevselliği
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM yüklendi, menü başlatılıyor...');
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.main-nav');
+    
+    console.log('Menu Toggle:', menuToggle);
+    console.log('Nav:', nav);
+
+    if (menuToggle && nav) {
+        console.log('Menü elemanları bulundu, event listener ekleniyor...');
+        menuToggle.addEventListener('click', function() {
+            console.log('Menü butonuna tıklandı!');
+            nav.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            console.log('Nav active:', nav.classList.contains('active'));
+            console.log('Button active:', menuToggle.classList.contains('active'));
+        });
+
+        // Menü linklerine tıklandığında menüyü kapat
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Sayfa dışına tıklandığında menüyü kapat
+        document.addEventListener('click', function(event) {
+            if (!nav.contains(event.target) && event.target !== menuToggle && !menuToggle.contains(event.target) && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+    } else {
+        console.log('Menü elemanları bulunamadı!');
+    }
+});
