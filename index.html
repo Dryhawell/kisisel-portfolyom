@@ -67,20 +67,20 @@
         </div>
     </div>
 
-    <!-- Dil Seçimi -->
-    <div class="language-selector">
-        <button onclick="changeLanguage('tr')">TR</button>
-        <button onclick="changeLanguage('en')">EN</button>
+    <!-- Tema Değiştirme -->
+    <div class="theme-toggle" style="position: fixed; top: 20px; left: 20px; z-index: 1001;">
+        <button onclick="toggleTheme()" class="tr-content" style="padding: 0.5rem 1rem; border: none; border-radius: 5px; background: #C68E17; color: white; cursor: pointer;">Tema Değiştir</button>
+        <button onclick="toggleTheme()" class="en-content" style="display: none; padding: 0.5rem 1rem; border: none; border-radius: 5px; background: #C68E17; color: white; cursor: pointer;">Change Theme</button>
     </div>
 
-    <!-- Tema Değiştirme -->
-    <div class="theme-toggle">
-        <button onclick="toggleTheme()" class="tr-content">Tema Değiştir</button>
-        <button onclick="toggleTheme()" class="en-content" style="display: none;">Change Theme</button>
+    <!-- Dil Seçimi -->
+    <div class="language-selector" style="position: fixed; top: 70px; left: 20px; z-index: 1001;">
+        <button onclick="changeLanguage('tr')" style="padding: 0.5rem 1rem; border: none; border-radius: 5px; background: #228B22; color: white; cursor: pointer; margin-right: 5px;">TR</button>
+        <button onclick="changeLanguage('en')" style="padding: 0.5rem 1rem; border: none; border-radius: 5px; background: #228B22; color: white; cursor: pointer;">EN</button>
     </div>
 
     <!-- HAMBURGER MENÜ BUTONU -->
-    <button id="menuBtn" style="position: fixed; top: 20px; right: 80px; z-index: 999999; background: #ff0000; color: white; border: none; border-radius: 5px; padding: 20px; cursor: pointer; font-size: 18px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); font-weight: bold;">
+    <button id="menuBtn" style="position: fixed; top: 20px; right: 20px; z-index: 999999; background: #228B22; color: white; border: none; border-radius: 5px; padding: 15px; cursor: pointer; font-size: 16px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); font-weight: bold;">
         ☰ MENÜ
     </button>
 
